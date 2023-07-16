@@ -1,16 +1,13 @@
-let userInput: unknown
-let userName: string
+const hobbies = ['Sports', 'Cooking']
+const activeHobbies = ['Hiking', ...hobbies]
 
-userInput = 5
-userInput = 'Max'
+activeHobbies.push(...hobbies)
 
-if (typeof userInput === 'string') {
-  userName = userInput
+const person = {
+  name: 'Max',
+  age: 30,
 }
 
-function generateError(message: string, code: number): never {
-  throw { message: message, errorCode: code }
+const copiedPerson = {
+  ...person,
 }
-
-const result = generateError('エラーが発生しました', 500)
-console.log(result)
